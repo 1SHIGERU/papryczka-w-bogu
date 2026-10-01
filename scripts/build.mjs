@@ -38,7 +38,8 @@ const offerCards = [
   {title:"Fast Food", description:"Burgery, zapiekanki, frytki i nuggetsy.", href:"#menu", index:"03", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790850876/WhatsApp_Image_2026-09-30_at_10.23.45_7.jpg", imageAlt:"Autentyczne zdjęcie wnętrza restauracji, sali i lady z witryną.", photoNote:"", topic:"fastfood"},
   {title:"Sałatki", description:"Lżejsze propozycje ze świeżymi składnikami.", href:"#menu", index:"04", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790851781/468323684_17858004312300900_8240667284657994399_n.jpg", imageAlt:"Szaszłyk z dodatkami na talerzu oraz miska zupy z oficjalnej galerii.", photoNote:"", topic:"salads"},
   {title:"Catering", description:"Oferta dla większej liczby osób.", href:"#catering", index:"05", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790847509/WhatsApp_Image_2026-09-30_at_10.23.45_1.jpg", imageAlt:"Szaszłyk i miska kremowej zupy sfotografowane w restauracji.", photoNote:""},
-  {title:"Urodziny dla dzieci", description:"Animacje, pizza i warsztaty robienia własnej pizzy.", href:"#urodziny", index:"06", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790851931/492512827_1307835494263917_5560112203056928154_n.jpg", imageAlt:"Małe słodkie wypieki z owocami z oficjalnej galerii restauracji.", photoNote:""}
+  {title:"Imprezy okolicznościowe", description:"Urodziny, chrzciny, roczki, wesela i stypy.", href:"#imprezy", index:"06", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790847516/WhatsApp_Image_2026-09-30_at_10.42.53.jpg", imageAlt:"Wnętrze restauracji przygotowane na spotkanie gości.", photoNote:""},
+  {title:"Urodziny dla dzieci", description:"Animacje, pizza i warsztaty robienia własnej pizzy.", href:"#urodziny", index:"07", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790851931/492512827_1307835494263917_5560112203056928154_n.jpg", imageAlt:"Małe słodkie wypieki z owocami z oficjalnej galerii restauracji.", photoNote:""}
 ];
 
 
@@ -49,9 +50,10 @@ const sliderImages = {
     "https://res.cloudinary.com/peakvbib/image/upload/v1790847515/WhatsApp_Image_2026-09-30_at_10.40.50_1.jpg"
   ],
   workshops: [
-    "https://res.cloudinary.com/peakvbib/image/upload/v1790847514/WhatsApp_Image_2026-09-30_at_10.39.25.jpg",
+    "https://res.cloudinary.com/peakvbib/image/upload/v1790886819/warsztat.jpg",
     "https://res.cloudinary.com/peakvbib/image/upload/v1790847510/WhatsApp_Image_2026-09-30_at_10.29.21.jpg",
-    "https://res.cloudinary.com/peakvbib/image/upload/v1790847517/WhatsApp_Image_2026-09-30_at_10.42.55_2.jpg"
+    "https://res.cloudinary.com/peakvbib/image/upload/v1790847517/WhatsApp_Image_2026-09-30_at_10.42.55_2.jpg",
+    "https://res.cloudinary.com/peakvbib/image/upload/v1790886819/warsztat.jpg"
   ]
 };
 function photoMarkup(src, alt, sizes = "(max-width: 600px) 90vw, (max-width: 900px) 45vw, 30vw", loading = "lazy") {
@@ -62,7 +64,7 @@ function photoMarkup(src, alt, sizes = "(max-width: 600px) 90vw, (max-width: 900
 }
 function renderOfferCard(card) {
   const photo = card.image ? `<span class="offer-card__photo-note">${esc(card.photoNote)}</span>${photoMarkup(card.image, card.imageAlt, "(max-width: 600px) 90vw, 32vw")}` : "";
-  return `<a class="offer-card" data-visual="${card.image ? "photo" : "brand"}" data-topic="${esc(card.topic || "")}" href="${esc(card.href)}" aria-label="${esc(card.title)} — zobacz więcej"><span class="offer-card__arrow" aria-hidden="true">↗</span>${photo}<span class="offer-card__content"><span class="offer-card__index">${card.index} / PAPRYCZKA</span><h3>${esc(card.title)}</h3><p>${esc(card.description)}</p></span></a>`;
+  return `<a class="offer-card" data-visual="${card.image ? "photo" : "brand"}" data-topic="${esc(card.topic || "")}" href="${esc(card.href)}" aria-label="${esc(card.title)} — zobacz więcej"><span class="offer-card__arrow" aria-hidden="true">↗</span>${photo}<span class="offer-card__content"><span class="offer-card__index">${card.index} </span><h3>${esc(card.title)}</h3><p>${esc(card.description)}</p></span></a>`;
 }
 function badgeClass(text) {
   if (text.includes("Nowość")) return "badge--new";
@@ -113,6 +115,14 @@ function renderGallery(item, index) {
 function renderReview(review) {
   return `<article class="review-card"><span class="review-quote-mark" aria-hidden="true">“</span><blockquote>${esc(review)}</blockquote><span class="review-source">Opinia klienta pobrana z Google Maps</span></article>`;
 }
+
+// Pierwszy slajd jest ładowany od razu, kolejne dopiero wtedy, gdy przeglądarka ma wolne zasoby.
+// Zdjęcia do tego slidera klient podmienia w src/data/site.json → heroSlides.
+const heroSlides = Array.isArray(site.heroSlides) && site.heroSlides.length
+  ? site.heroSlides.slice(0, 4)
+  : [{ src: "/images/pizza-hero-1200.webp", alt: "Pizza z dodatkami.", position: "center" }];
+const heroSlidesHTML = heroSlides.map((slide, index) => `<figure class="hero-slide${index === 0 ? " is-active" : ""}" data-hero-slide aria-hidden="${index === 0 ? "false" : "true"}"><img src="${esc(slide.src)}" alt="${esc(slide.alt || "Zdjęcie restauracji Papryczka w Bogu.")}" style="object-position:${esc(slide.position || "center")}" width="1200" height="800" ${index === 0 ? "fetchpriority=\"high\"" : "loading=\"lazy\""}></figure>`).join("");
+const heroDotsHTML = heroSlides.map((_, index) => `<button type="button" data-hero-dot="${index}" aria-label="Pokaż zdjęcie ${index + 1}" aria-current="${index === 0 ? "true" : "false"}"></button>`).join("");
 const tabs = menu.categories.map((category, index) => `<button class="menu-tab" id="tab-${esc(category.id)}" type="button" role="tab" data-category-tab="${esc(category.id)}" aria-controls="panel-${esc(category.id)}" aria-selected="${index === 0 ? "true" : "false"}" tabindex="${index === 0 ? "0" : "-1"}">${esc(category.label)}</button>`).join("");
 const panels = menu.categories.map(renderPanel).join("");
 const birthdayFeatures = catering.birthday.features.map((feature) => `<li>${esc(feature)}</li>`).join("");
@@ -169,6 +179,9 @@ const replacements = {
   "%%BIRTHDAY_HREF%%": `tel:${esc(site.birthdayPhoneHref)}`,
   "%%MAP_LINK%%": esc(site.googleMapsLink),
   "%%MAP_EMBED_URL%%": esc(site.googleMapsEmbedUrl),
+  "%%HERO_SLIDES%%": heroSlidesHTML,
+  "%%HERO_DOTS%%": heroDotsHTML,
+  "%%HERO_SLIDES_TOTAL%%": String(heroSlides.length).padStart(2, "0"),
   "%%OFFER_CARDS%%": offerCardsHTML,
   "%%MENU_TABS%%": tabs,
   "%%MENU_PANELS%%": panels,

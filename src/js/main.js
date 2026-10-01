@@ -11,6 +11,59 @@ const gallery = parseData("gallery-data").gallery || [];
 const ORDER_URL = site.ORDER_URL;
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+// Slider zdjęć na pierwszym ekranie. Adresy zdjęć są konfigurowane w site.json.
+document.querySelectorAll("[data-hero-slider]").forEach((heroSlider) => {
+  const slides = [...heroSlider.querySelectorAll("[data-hero-slide]")];
+  const dots = [...heroSlider.querySelectorAll("[data-hero-dot]")];
+  const counter = heroSlider.querySelector("[data-hero-count]");
+  let activeSlide = 0;
+  let intervalId = null;
+
+  function renderHeroSlider() {
+    slides.forEach((slide, index) => {
+      const isActive = index === activeSlide;
+      slide.classList.toggle("is-active", isActive);
+      slide.setAttribute("aria-hidden", String(!isActive));
+    });
+    dots.forEach((dot, index) => dot.setAttribute("aria-current", String(index === activeSlide)));
+    if (counter) counter.textContent = `${String(activeSlide + 1).padStart(2, "0")} / ${String(slides.length).padStart(2, "0")}`;
+  }
+  function moveHeroSlider(step) {
+    activeSlide = (activeSlide + step + slides.length) % slides.length;
+    renderHeroSlider();
+  }
+  function stopAutoplay() {
+    if (intervalId) window.clearInterval(intervalId);
+    intervalId = null;
+  }
+  function startAutoplay() {
+    stopAutoplay();
+    if (slides.length > 1 && !prefersReducedMotion) intervalId = window.setInterval(() => moveHeroSlider(1), 6000);
+  }
+
+  heroSlider.querySelector("[data-hero-prev]")?.addEventListener("click", () => { moveHeroSlider(-1); startAutoplay(); });
+  heroSlider.querySelector("[data-hero-next]")?.addEventListener("click", () => { moveHeroSlider(1); startAutoplay(); });
+  dots.forEach((dot) => dot.addEventListener("click", () => {
+    activeSlide = Number(dot.dataset.heroDot) || 0;
+    renderHeroSlider();
+    startAutoplay();
+  }));
+  heroSlider.addEventListener("mouseenter", stopAutoplay);
+  heroSlider.addEventListener("mouseleave", startAutoplay);
+  heroSlider.addEventListener("focusin", stopAutoplay);
+  heroSlider.addEventListener("focusout", (event) => {
+    if (!heroSlider.contains(event.relatedTarget)) startAutoplay();
+  });
+  let touchStartX = 0;
+  heroSlider.addEventListener("touchstart", (event) => { touchStartX = event.changedTouches[0].clientX; }, { passive: true });
+  heroSlider.addEventListener("touchend", (event) => {
+    const distance = event.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(distance) > 45) { moveHeroSlider(distance < 0 ? 1 : -1); startAutoplay(); }
+  }, { passive: true });
+  renderHeroSlider();
+  startAutoplay();
+});
+
 document.querySelectorAll(".brand[href='#top']").forEach((brand) => brand.addEventListener("click", (event) => {
   event.preventDefault();
   window.scrollTo({ top: 0, left: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
@@ -176,6 +229,10 @@ function openProduct(productId, trigger) {
 
   const info = document.createElement("div");
   info.className = "dialog-info";
+  const kicker = document.createElement("p");
+  kicker.className = "dialog-kicker";
+  kicker.textContent = category?.label ? `MENU · ${category.label}` : "MENU PAPRYCZKI";
+  info.append(kicker);
   if (badges.length) {
     const badgeRow = document.createElement("div");
     badgeRow.className = "badge-row";
@@ -232,6 +289,9 @@ function openProduct(productId, trigger) {
     order.className = "button button--primary";
     order.type = "button";
     order.textContent = "Zamów online ↗";
+    order.addEventListener("click", () => {
+      if (ORDER_URL) window.open(ORDER_URL, "_blank", "noopener,noreferrer");
+    });
     info.append(order);
   }
   dialogContent.classList.toggle("dialog-content--text-only", !photo);

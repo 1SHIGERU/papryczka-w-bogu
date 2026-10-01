@@ -1,6 +1,28 @@
 {
   "name": "Papryczka w Bogu",
   "tagline": "Pizza, obiady i coś więcej.",
+  "heroSlides": [
+    {
+      "src": "https://res.cloudinary.com/peakvbib/image/upload/v1790886175/WhatsApp_Image_2026-10-01_at_17.10.24.jpg",
+      "alt": "Pizza z dodatkami na drewnianej desce.",
+      "position": "center center"
+    },
+    {
+      "src": "https://res.cloudinary.com/peakvbib/image/upload/v1790866878/WhatsApp_Image_2026-10-01_at_16.58.15.jpg",
+      "alt": "Wnętrze restauracji Papryczka w Bogu.",
+      "position": "center center"
+    },
+    {
+      "src": "https://res.cloudinary.com/peakvbib/image/upload/v1790866803/WhatsApp_Image_2026-10-01_at_16.55.58.jpg",
+      "alt": "Restauracja przygotowana na spotkanie gości.",
+      "position": "center center"
+    },
+    {
+      "src": "https://res.cloudinary.com/peakvbib/image/upload/v1790886116/WhatsApp_Image_2026-10-01_at_17.06.07.jpg",
+      "alt": "Pizza przygotowana w Papryczce w Bogu.",
+      "position": "center center"
+    }
+  ],
   "phone": "517 577 606",
   "phoneHref": "+48517577606",
   "birthdayPhone": "508 709 344",
@@ -13,8 +35,8 @@
     "addressLocality": "Rybnik",
     "addressCountry": "PL"
   },
-  "restaurantHours": "codziennie 12:00–21:30",
-  "deliveryHours": "codziennie 12:00–20:45",
+  "restaurantHours": "poniedziałek–czwartek 12:00–20:00, piątek–niedziela 12:00–21:00",
+  "deliveryHours": "poniedziałek–czwartek 12:00–20:00, piątek–niedziela 12:00–21:00",
   "ORDER_URL": "https://www.papryczkawbogu.pl/restauracja/papryczka-w-bogu",
   "orderUrlSource": "oficjalna strona restauracji",
   "facebookUrl": "https://www.facebook.com/profile.php?id=100051124369968",
@@ -24,21 +46,5 @@
   "canonicalUrl": null,
   "menuPricesConfirmed": false,
   "satisfactionStatement": "99,2% klientów jest z nas zadowolonych.",
-  "allergens": [
-    "Gluten",
-    "Skorupiaki",
-    "Jaja",
-    "Ryby",
-    "Orzeszki ziemne",
-    "Soja",
-    "Mleko / laktoza",
-    "Orzechy",
-    "Seler",
-    "Gorczyca",
-    "Sezam",
-    "Dwutlenek siarki",
-    "Łubin",
-    "Mięczaki"
-  ],
-  "logoUrl": "https://res.cloudinary.com/peakvbib/image/upload/v1790853133/Przechwytywanie.jpg"
+  "logoUrl": "https://res.cloudinary.com/peakvbib/image/upload/v1790865994/logo-removebg-preview.png"
 }
