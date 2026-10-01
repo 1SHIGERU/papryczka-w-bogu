@@ -1,0 +1,18 @@
+{
+  "packages": [
+    {"id":"catering-5-8-350","guests":"5–8 osób","price":"350 zł","items":["Szaszłyk drobiowy — 2 szt.","Devolay z pieczarkami — 2 szt.","Devolay 4 sery — 3 szt.","Devolay z porem, szynką i serem — 3 szt.","Ziemniaczki opiekane i frytki — po 1 szt.","2 sałatki do wyboru — po 1 szt."]},
+    {"id":"catering-5-8-400","guests":"5–8 osób","price":"400 zł","items":["Udko z kaczki — 3 szt.","Policzki wieprzowe w sosie grzybowym — 3 porcje","Devolay 4 sery — 2 szt.","Tradycyjny kotlet schabowy — 2 szt.","Ziemniaczki opiekane i frytki — po 1 szt.","2 sałatki do wyboru — po 1 szt."]},
+    {"id":"catering-8-10-500","guests":"8–10 osób","price":"500 zł","items":["Kotlet schabowy z oscypkiem — 3 szt.","Tradycyjny kotlet drobiowy — 3 szt.","Devolay z pieczarkami — 3 szt.","Szaszłyk drobiowy — 3 szt.","Kula z brokułem — 3 szt.","Ziemniaczki opiekane i frytki — po 2 szt.","2 sałatki do wyboru — po 2 szt."]},
+    {"id":"catering-8-10-550","guests":"8–10 osób","price":"550 zł","items":["Udko z kaczki — 3 szt.","Policzki wieprzowe w sosie grzybowym — 3 porcje","Rolada wieprzowa — 3 szt.","Devolay z pieczarkami — 3 szt.","Kotlet schabowy z oscypkiem — 3 szt.","Ziemniaczki opiekane i kluski — po 2 szt.","2 sałatki do wyboru — po 2 szt."]},
+    {"id":"catering-10-12-650","guests":"10–12 osób","price":"650 zł","items":["Szaszłyk drobiowy — 3 szt.","Devolay z porem, szynką i serem — 3 szt.","Devolay z pieczarkami — 3 szt.","Devolay 4 sery — 3 szt.","Kula z brokułem — 3 szt.","Kotlet schabowy z oscypkiem — 3 szt.","Ziemniaczki opiekane i frytki — po 2 szt.","2 sałatki do wyboru — po 2 szt."]},
+    {"id":"catering-10-12-750","guests":"10–12 osób","price":"750 zł","items":["Udko z kaczki — 3 szt.","Policzki wieprzowe w sosie grzybowym — 3 porcje","Rolada wołowa — 3 szt.","Devolay 4 sery — 3 szt.","Kotlet schabowy z oscypkiem — 3 szt.","Nuggetsy z kurczaka — 3 szt.","Ziemniaczki opiekane i kluski — po 2 szt.","2 sałatki do wyboru — po 2 szt."]}
+  ],
+  "salads": ["Makaronowa","Grecka","Z brokułem","Gyros","Kapusta zasmażana","Warzywna","Z rukolą"],
+  "birthday": {
+    "price":"800 zł",
+    "includedChildren":10,
+    "additionalChildPrice":"80 zł",
+    "duration":"około 2 godzin",
+    "features":["Do wyboru: chipsy, paluszki lub koreczki owocowe","Woda bez limitu","Dzbanek smakowej lemoniady","Zaproszenia","Animator do zabawy","Warsztat robienia własnej pizzy","1 pizza 25 cm na osobę"]
+  }
+}

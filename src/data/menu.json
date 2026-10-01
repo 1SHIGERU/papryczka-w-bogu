@@ -1,0 +1,1116 @@
+{
+  "categories": [
+    {
+      "id": "pizza",
+      "label": "Pizza",
+      "description": "Autorskie i klasyczne kompozycje z własnymi dodatkami.",
+      "photo": "",
+      "photoAlt": "Pizza z dodatkami sfotografowana na drewnianej desce; oficjalne zdjęcie z systemu zamówień, nie fotografia konkretnego wariantu menu.",
+      "photoSource": "",
+      "photoCaption": ""
+    },
+    {
+      "id": "lunch",
+      "label": "Dania obiadowe",
+      "description": "Dania obiadowe wydajemy do godziny 17:00.",
+      "photo": "",
+      "photoAlt": "Danie obiadowe i miska zupy sfotografowane w lokalu; fotografia z oficjalnej galerii.",
+      "photoSource": "",
+      "photoCaption": "Autentyczny kadr z galerii lokalu; zdjęcie poglądowe, nie zdjęcie konkretnego dania z menu."
+    },
+    {
+      "id": "fastfood",
+      "label": "Fast Food",
+      "description": "Burgery, zapiekanki, frytki i nuggetsy.",
+      "photo": null,
+      "photoAlt": null,
+      "photoSource": null,
+      "photoCaption": null
+    },
+    {
+      "id": "salads",
+      "label": "Sałatki",
+      "description": "Lżejsze propozycje ze świeżymi składnikami.",
+      "photo": null,
+      "photoAlt": null,
+      "photoSource": null,
+      "photoCaption": null
+    },
+    {
+      "id": "casseroles",
+      "label": "Zapiekaniec",
+      "description": "Wytrawne zapiekańce z makaronem i dodatkami.",
+      "photo": null,
+      "photoAlt": null,
+      "photoSource": null,
+      "photoCaption": null
+    },
+    {
+      "id": "drinks",
+      "label": "Napoje",
+      "description": "Napoje do posiłku i na co dzień.",
+      "photo": null,
+      "photoAlt": null,
+      "photoSource": null,
+      "photoCaption": null
+    }
+  ],
+  "products": [
+    {
+      "id": "pizza-margarita",
+      "category": "pizza",
+      "name": "Margarita",
+      "description": "Prosta, klasyczna kompozycja dla miłośników tradycyjnych smaków.",
+      "ingredients": [
+        "Sos",
+        "Ser"
+      ],
+      "price": "32 cm: 33 zł · 45 cm: 48 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "pizza-szynka",
+      "category": "pizza",
+      "name": "Szynka",
+      "description": "Delikatna pizza o łagodnym, mięsnym charakterze.",
+      "ingredients": [
+        "Sos",
+        "Ser",
+        "Szynka"
+      ],
+      "price": "32 cm: 37 zł · 45 cm: 52 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "pizza-salami",
+      "category": "pizza",
+      "name": "Salami",
+      "description": "Wyrazista kompozycja z pikantniejszą nutą salami.",
+      "ingredients": [
+        "Sos",
+        "Ser",
+        "Salami",
+        "Pieczarki"
+      ],
+      "price": "32 cm: 37 zł · 45 cm: 54 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "pizza-parmenska",
+      "category": "pizza",
+      "name": "Parmeńska",
+      "description": "Bogata kompozycja łącząca szynkę, sery i świeże warzywne akcenty.",
+      "ingredients": [
+        "Sos",
+        "Ser",
+        "Szynka parmeńska",
+        "Ser halloumi",
+        "Pomidorki koktajlowe",
+        "Świeża rukola"
+      ],
+      "price": "32 cm: 44 zł · 45 cm: 64 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "pizza-hausen",
+      "category": "pizza",
+      "name": "Hausen",
+      "description": "Solidna, mięsna pizza dla fanów intensywnych dodatków.",
+      "ingredients": [
+        "Sos",
+        "Ser",
+        "Boczek",
+        "Szynka",
+        "Salami"
+      ],
+      "price": "32 cm: 40 zł · 45 cm: 58 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "pizza-gruszka",
+      "category": "pizza",
+      "name": "Gruszka",
+      "description": "Słodko-wytrawne połączenie owocu, sera pleśniowego i chrupiących dodatków.",
+      "ingredients": [
+        "Sos",
+        "Ser",
+        "Gruszka",
+        "Ser gorgonzola",
+        "Prażone orzechy włoskie"
+      ],
+      "price": "32 cm: 41 zł · 45 cm: 60 zł",
+      "badges": [
+        "Oferta specjalna"
+      ],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "pizza-hawajska",
+      "category": "pizza",
+      "name": "Hawajska",
+      "description": "Lekko słodka kompozycja inspirowana klasycznym połączeniem smaków.",
+      "ingredients": [
+        "Sos",
+        "Ser",
+        "Szynka",
+        "Ananas",
+        "Kukurydza"
+      ],
+      "price": "32 cm: 38 zł · 45 cm: 56 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "pizza-kurczak",
+      "category": "pizza",
+      "name": "Kurczak",
+      "description": "Delikatna pizza z drobiowym dodatkiem i warzywnym akcentem.",
+      "ingredients": [
+        "Sos",
+        "Ser",
+        "Kurczak",
+        "Brokuł",
+        "Cebula"
+      ],
+      "price": "32 cm: 44 zł · 45 cm: 64 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "pizza-krewetka",
+      "category": "pizza",
+      "name": "Krewetka",
+      "description": "Lekka propozycja o morskim charakterze i świeżym aromacie.",
+      "ingredients": [
+        "Sos",
+        "Ser",
+        "Krewetki koktajlowe",
+        "Świeży czosnek"
+      ],
+      "price": "32 cm: 44 zł · 45 cm: 64 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "pizza-bosman",
+      "category": "pizza",
+      "name": "Bosman",
+      "description": "Klasyczna, sycąca kompozycja z pieczarkami i dodatkami mięsnymi.",
+      "ingredients": [
+        "Sos",
+        "Ser",
+        "Pieczarki",
+        "Szynka",
+        "Boczek"
+      ],
+      "price": "32 cm: 40 zł · 45 cm: 58 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "pizza-wegetariana",
+      "category": "pizza",
+      "name": "Wegetariana",
+      "description": "Warzywna propozycja pełna kolorowych, świeżych dodatków.",
+      "ingredients": [
+        "Sos",
+        "Ser",
+        "Pomidorki koktajlowe",
+        "Brokuł",
+        "Kukurydza"
+      ],
+      "price": "32 cm: 40 zł · 45 cm: 58 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "pizza-z-jajem",
+      "category": "pizza",
+      "name": "Z jajem",
+      "description": "Wyrazista pizza śniadaniowa z kremowym jajkiem i chrupiącym akcentem.",
+      "ingredients": [
+        "Sos",
+        "Ser",
+        "Boczek",
+        "Jajko usadzone",
+        "Świeży szczypior"
+      ],
+      "price": "32 cm: 41 zł · 45 cm: 59 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "pizza-bahama",
+      "category": "pizza",
+      "name": "Bahama",
+      "description": "Uniwersalna kompozycja łącząca warzywa z klasycznymi dodatkami.",
+      "ingredients": [
+        "Sos",
+        "Ser",
+        "Pieczarki",
+        "Szynka",
+        "Pomidor",
+        "Kukurydza"
+      ],
+      "price": "32 cm: 40 zł · 45 cm: 58 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "pizza-serowa",
+      "category": "pizza",
+      "name": "Serowa",
+      "description": "Dla miłośników sera, z wyrazistym i kremowym finiszem.",
+      "ingredients": [
+        "Sos",
+        "Ser",
+        "Ser gorgonzola",
+        "Ser camembert"
+      ],
+      "price": "32 cm: 41 zł · 45 cm: 59 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "pizza-chlopska",
+      "category": "pizza",
+      "name": "Chłopska",
+      "description": "Treściwa, swojska propozycja z charakterystycznym kwaśnym akcentem.",
+      "ingredients": [
+        "Sos",
+        "Ser",
+        "Kiełbasa",
+        "Pieczarki",
+        "Ogórek kiszony"
+      ],
+      "price": "32 cm: 42 zł · 45 cm: 60 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "pizza-goralska",
+      "category": "pizza",
+      "name": "Góralska",
+      "description": "Góralska kompozycja łącząca dymne, mięsne i lekko słodkie nuty.",
+      "ingredients": [
+        "Sos",
+        "Ser",
+        "Boczek",
+        "Kiełbasa",
+        "Ser wędzony",
+        "Żurawina"
+      ],
+      "price": "32 cm: 42 zł · 45 cm: 60 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "pizza-halloumi",
+      "category": "pizza",
+      "name": "Halloumi",
+      "description": "Nowoczesna, warzywna propozycja z delikatnie słonym serem.",
+      "ingredients": [
+        "Sos",
+        "Ser",
+        "Ser halloumi",
+        "Cukinia",
+        "Świeży czosnek",
+        "Słonecznik prażony"
+      ],
+      "price": "32 cm: 42 zł · 45 cm: 60 zł",
+      "badges": [
+        "Nowość"
+      ],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "pizza-firmowa",
+      "category": "pizza",
+      "name": "Firmowa",
+      "description": "Firmowa pizza pełna różnorodnych dodatków i zdecydowanego smaku.",
+      "ingredients": [
+        "Sos",
+        "Ser",
+        "Pieczarki",
+        "Szynka",
+        "Salami",
+        "Boczek",
+        "Pomidor",
+        "Brokuł",
+        "Kukurydza"
+      ],
+      "price": "32 cm: 44 zł · 45 cm: 64 zł",
+      "badges": [
+        "Szef kuchni poleca"
+      ],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "pizza-ostra",
+      "category": "pizza",
+      "name": "Ostra",
+      "description": "Ognista propozycja dla osób, które lubią mocno doprawione pizze.",
+      "ingredients": [
+        "Sos",
+        "2 × ser",
+        "Szynka",
+        "Salami",
+        "Boczek",
+        "Papryka",
+        "Cebula",
+        "Kukurydza",
+        "Pomidor",
+        "Brokuł",
+        "Peperoni",
+        "Chili"
+      ],
+      "price": "32 cm: 46 zł · 45 cm: 66 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "lunch-zupa-dnia",
+      "category": "lunch",
+      "name": "Zupa dnia",
+      "description": "Prosimy pytać obsługę o szczegóły zupy dnia.",
+      "ingredients": [],
+      "price": "10 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "lunch-danie-dnia",
+      "category": "lunch",
+      "name": "Danie dnia",
+      "description": "Prosimy pytać obsługę o szczegóły zupy dnia.",
+      "ingredients": [],
+      "price": "28 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "lunch-zestaw-dnia",
+      "category": "lunch",
+      "name": "Zestaw dnia (zupa + II danie)",
+      "description": "Zupa dnia oraz drugie danie.",
+      "ingredients": [],
+      "price": "36 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "lunch-camembert",
+      "category": "lunch",
+      "name": "Smażony camembert + frytki + surówka",
+      "description": "Smażony camembert podawany z frytkami i surówką.",
+      "ingredients": [
+        "Smażony camembert",
+        "Frytki",
+        "Surówka"
+      ],
+      "price": "32 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "lunch-schabowy",
+      "category": "lunch",
+      "name": "Kotlet schabowy + ziemniaki + kapusta zasmażana",
+      "description": "Kotlet schabowy z ziemniakami i kapustą zasmażaną.",
+      "ingredients": [
+        "Kotlet schabowy",
+        "Ziemniaki",
+        "Kapusta zasmażana"
+      ],
+      "price": "34 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "lunch-rolada",
+      "category": "lunch",
+      "name": "Rolada wieprzowa + kluski z sosem + kapusta czerwona",
+      "description": "Rolada wieprzowa podawana z kluskami z sosem i czerwoną kapustą.",
+      "ingredients": [
+        "Rolada wieprzowa",
+        "Kluski z sosem",
+        "Kapusta czerwona"
+      ],
+      "price": "41 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "lunch-schabowy-ser",
+      "category": "lunch",
+      "name": "Kotlet schabowy z serem i pieczarkami + frytki + surówka",
+      "description": "Kotlet schabowy z serem i pieczarkami, frytki i surówka.",
+      "ingredients": [
+        "Kotlet schabowy",
+        "Ser",
+        "Pieczarki",
+        "Frytki",
+        "Surówka"
+      ],
+      "price": "38 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "lunch-kluski",
+      "category": "lunch",
+      "name": "Kluski z sosem",
+      "description": "Kluski z sosem.",
+      "ingredients": [
+        "Kluski",
+        "Sos"
+      ],
+      "price": "13 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "lunch-placek",
+      "category": "lunch",
+      "name": "Placek po węgiersku",
+      "description": "Placek po węgiersku.",
+      "ingredients": [],
+      "price": "38 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "lunch-rosol",
+      "category": "lunch",
+      "name": "Rosół z makaronem",
+      "description": "Rosół podawany z makaronem.",
+      "ingredients": [
+        "Rosół",
+        "Makaron"
+      ],
+      "price": "12 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "lunch-nuggetsy",
+      "category": "lunch",
+      "name": "Nuggetsy + frytki + surówka",
+      "description": "Nuggetsy podawane z frytkami i surówką.",
+      "ingredients": [
+        "Nuggetsy",
+        "Frytki",
+        "Surówka"
+      ],
+      "price": "25 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "lunch-drobiowy-platki",
+      "category": "lunch",
+      "name": "Kotlet drobiowy w płatkach + frytki + surówka",
+      "description": "Kotlet drobiowy w płatkach z frytkami i surówką.",
+      "ingredients": [
+        "Kotlet drobiowy w płatkach",
+        "Frytki",
+        "Surówka"
+      ],
+      "price": "34 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "lunch-drobiowy-szpinak",
+      "category": "lunch",
+      "name": "Kotlet drobiowy ze szpinakiem i serem + frytki + surówka",
+      "description": "Kotlet drobiowy ze szpinakiem i serem, frytki i surówka.",
+      "ingredients": [
+        "Kotlet drobiowy",
+        "Szpinak",
+        "Ser",
+        "Frytki",
+        "Surówka"
+      ],
+      "price": "38 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "lunch-placki",
+      "category": "lunch",
+      "name": "Placki ziemniaczane ze śmietaną lub cukrem",
+      "description": "Do wyboru ze śmietaną albo z cukrem.",
+      "ingredients": [
+        "Placki ziemniaczane",
+        "Śmietana lub cukier"
+      ],
+      "price": "24 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "lunch-nalesniki",
+      "category": "lunch",
+      "name": "Naleśniki na słodko",
+      "description": "Do wyboru Nutella, dżem lub twaróg.",
+      "ingredients": [
+        "Naleśniki",
+        "Nutella lub dżem lub twaróg"
+      ],
+      "price": "26 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "lunch-policzki",
+      "category": "lunch",
+      "name": "Policzki wieprzowe + kluski z sosem pieczeniowym + surówka",
+      "description": "Policzki wieprzowe z kluskami, sosem pieczeniowym i surówką.",
+      "ingredients": [
+        "Policzki wieprzowe",
+        "Kluski",
+        "Sos pieczeniowy",
+        "Surówka"
+      ],
+      "price": "42 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "fast-frytki",
+      "category": "fastfood",
+      "name": "Frytki",
+      "description": "Porcja 150 g.",
+      "ingredients": [
+        "Frytki ziemniaczane"
+      ],
+      "price": "8 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "fast-sprezynki",
+      "category": "fastfood",
+      "name": "Sprężynki z ziemniaka",
+      "description": "Porcja 150 g.",
+      "ingredients": [
+        "Sprężynki z ziemniaka"
+      ],
+      "price": "11 zł",
+      "badges": [
+        "Oferta specjalna"
+      ],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "fast-zapiekanka-klasyczna",
+      "category": "fastfood",
+      "name": "Zapiekanka „Klasyczna” na bagietce",
+      "description": "Zapiekanka na bagietce z pieczarkami i serem.",
+      "ingredients": [
+        "Bagietka",
+        "Pieczarki",
+        "Ser"
+      ],
+      "price": "14 zł",
+      "badges": [
+        "Nowość"
+      ],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "fast-burger-kurczak",
+      "category": "fastfood",
+      "name": "Hamburger „Kurczak w płatkach”",
+      "description": "Bułka, kurczak w płatkach, sałata, cebula, pomidor i sos serowy.",
+      "ingredients": [
+        "Bułka",
+        "Kurczak w płatkach",
+        "Sałata",
+        "Cebula",
+        "Pomidor",
+        "Sos serowy"
+      ],
+      "price": "28 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "fast-burger-wolowy",
+      "category": "fastfood",
+      "name": "Hamburger „Wołowy” 100%",
+      "description": "Bułka, mięso wołowe, bekon, sałata, cebula, pomidor, ogórek i sos.",
+      "ingredients": [
+        "Bułka",
+        "Mięso wołowe",
+        "Bekon",
+        "Sałata",
+        "Cebula",
+        "Pomidor",
+        "Ogórek",
+        "Sos"
+      ],
+      "price": "30 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "fast-nuggetsy-5",
+      "category": "fastfood",
+      "name": "Nuggetsy 5 szt.",
+      "description": "Porcja 5 sztuk.",
+      "ingredients": [],
+      "price": "12 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "fast-nuggetsy-10",
+      "category": "fastfood",
+      "name": "Nuggetsy 10 szt.",
+      "description": "Porcja 10 sztuk.",
+      "ingredients": [],
+      "price": "22 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "fast-batat",
+      "category": "fastfood",
+      "name": "Frytki z batatów",
+      "description": "Porcja 150 g.",
+      "ingredients": [
+        "Frytki z batatów"
+      ],
+      "price": "14 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "fast-burger-camembert",
+      "category": "fastfood",
+      "name": "Hamburger „Camembert”",
+      "description": "Bułka maślana, smażony camembert, rukola, czerwona cebula, prażony orzech włoski i żurawina.",
+      "ingredients": [
+        "Bułka maślana",
+        "Smażony ser camembert",
+        "Rukola",
+        "Czerwona cebula",
+        "Prażony orzech włoski",
+        "Żurawina"
+      ],
+      "price": "28 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "fast-zapiekanka-chlopska",
+      "category": "fastfood",
+      "name": "Zapiekanka „Chłopska” na bagietce",
+      "description": "Ser, pieczarki, boczek i ogórek kiszony na bagietce.",
+      "ingredients": [
+        "Bagietka",
+        "Ser",
+        "Pieczarki",
+        "Boczek",
+        "Ogórek kiszony"
+      ],
+      "price": "16 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "salad-kurczak",
+      "category": "salads",
+      "name": "Sałatka z kurczakiem",
+      "description": "Kurczak, selekcja sałat, grissini, pomidor, ogórek i sos czosnkowy.",
+      "ingredients": [
+        "Kurczak",
+        "Selekcja sałat",
+        "Grissini",
+        "Pomidor",
+        "Ogórek",
+        "Sos czosnkowy"
+      ],
+      "price": "28 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "salad-grecka",
+      "category": "salads",
+      "name": "Sałatka Grecka",
+      "description": "Selekcja sałat, papryka, pomidor, ogórek, oliwki, ser feta i sos.",
+      "ingredients": [
+        "Selekcja sałat",
+        "Papryka",
+        "Pomidor",
+        "Ogórek",
+        "Oliwki",
+        "Ser feta",
+        "Sos"
+      ],
+      "price": "24 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "salad-gruszka",
+      "category": "salads",
+      "name": "Sałatka z gruszką",
+      "description": "Selekcja sałat, orzechy, gruszka, camembert i sos musztardowo-miodowy.",
+      "ingredients": [
+        "Selekcja sałat",
+        "Orzechy",
+        "Gruszka",
+        "Ser camembert",
+        "Sos musztardowo-miodowy"
+      ],
+      "price": "24 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "casserole-kurczak",
+      "category": "casseroles",
+      "name": "Zapiekaniec z kurczakiem",
+      "description": "Porcja w foremce 1000 ml.",
+      "ingredients": [
+        "Makaron",
+        "Kurczak",
+        "Boczek",
+        "Brokuł",
+        "Sos śmietanowo-czosnkowy",
+        "Ser"
+      ],
+      "price": "32 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "casserole-losos",
+      "category": "casseroles",
+      "name": "Zapiekaniec z łososiem",
+      "description": "Porcja w foremce 1000 ml.",
+      "ingredients": [
+        "Makaron",
+        "Łosoś",
+        "Szpinak z czosnkiem",
+        "Sos śmietanowo-czosnkowy",
+        "Szczypiorek",
+        "Ser"
+      ],
+      "price": "32 zł",
+      "badges": [
+        "Szef kuchni poleca"
+      ],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "casserole-kurczak-mini",
+      "category": "casseroles",
+      "name": "Zapiekaniec z kurczakiem MINI",
+      "description": "Foremka 500 ml.",
+      "ingredients": [
+        "Makaron",
+        "Kurczak",
+        "Boczek",
+        "Brokuł",
+        "Sos śmietanowo-czosnkowy",
+        "Ser"
+      ],
+      "price": "17 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "casserole-losos-mini",
+      "category": "casseroles",
+      "name": "Zapiekaniec z łososiem MINI",
+      "description": "Foremka 500 ml.",
+      "ingredients": [
+        "Makaron",
+        "Łosoś",
+        "Szpinak z czosnkiem",
+        "Sos śmietanowo-czosnkowy",
+        "Szczypiorek",
+        "Ser"
+      ],
+      "price": "17 zł",
+      "badges": [
+        "Szef kuchni poleca"
+      ],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "drink-kwas",
+      "category": "drinks",
+      "name": "Kwas chlebowy 0,33 l",
+      "description": "Butelka 0,33 l.",
+      "ingredients": [],
+      "price": "10 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "drink-cola-05",
+      "category": "drinks",
+      "name": "Cola 0,5 l",
+      "description": "Butelka 0,5 l.",
+      "ingredients": [],
+      "price": "10 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "drink-jagoda",
+      "category": "drinks",
+      "name": "Sok z jagody kamczackiej 0,3 l",
+      "description": "Sok 0,3 l.",
+      "ingredients": [],
+      "price": "13 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    },
+    {
+      "id": "drink-cola-085",
+      "category": "drinks",
+      "name": "Cola 0,85 l",
+      "description": "Butelka 0,85 l.",
+      "ingredients": [],
+      "price": "12 zł",
+      "badges": [],
+      "allergens": [],
+      "available": null,
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null
+    }
+  ]
+}

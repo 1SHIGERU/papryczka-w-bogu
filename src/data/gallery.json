@@ -1,0 +1,23 @@
+{
+  "gallery": [
+    {"id":"gallery-01","file":"gallery-01-1200.webp","alt":"Wnętrze Papryczki w Bogu: sala restauracyjna i lada z witryną.","caption":"Wnętrze lokalu"},
+    {"id":"gallery-02","file":"gallery-02-1200.webp","alt":"Danie obiadowe na talerzu i miska zupy na stole w restauracji.","caption":"Danie obiadowe"},
+    {"id":"gallery-03","file":"gallery-03-1200.webp","alt":"Małe deserowe wypieki udekorowane owocami na półmisku.","caption":"Deser z owocami"},
+    {"id":"gallery-05","file":"gallery-05-1200.webp","alt":"Wypiek z kruszonką i owocami w czarnej formie.","caption":""},
+    {"id":"gallery-06","file":"gallery-06-1200.webp","alt":"Szaszłyk i miska zupy sfotografowane na restauracyjnym stole.","caption":"Szaszłyk i zupa"},
+    {"id":"gallery-cloud-pizza","src":"https://res.cloudinary.com/peakvbib/image/upload/v1790847509/WhatsApp_Image_2026-09-30_at_10.23.45_6.jpg","alt":"Pizza z dodatkami przygotowana na drewnianej desce.","caption":"Pizza"},
+    {"id":"gallery-cloud-interior","src":"https://res.cloudinary.com/peakvbib/image/upload/v1790851627/625158648_1551225216591609_745353682779473844_n.jpg","alt":"Wnętrze restauracji Papryczka w Bogu.","caption":"Wnętrze restauracji"},
+    {"id":"gallery-cloud-event","src":"https://res.cloudinary.com/peakvbib/image/upload/v1790847516/WhatsApp_Image_2026-09-30_at_10.42.53.jpg","alt":"Kadr restauracji przygotowanej na spotkanie gości.","caption":"Spotkanie przy stole"},
+    {"id":"gallery-cloud-dish","src":"https://res.cloudinary.com/peakvbib/image/upload/v1790847513/WhatsApp_Image_2026-09-30_at_10.37.41_6.jpg","alt":"Danie obiadowe przygotowane na rodzinne spotkanie.","caption":"Uroczystości"},
+    {"id":"gallery-cloud-catering","src":"https://res.cloudinary.com/peakvbib/image/upload/v1790847509/WhatsApp_Image_2026-09-30_at_10.23.45.jpg","alt":"Danie z dodatkami podane podczas wspólnego spotkania.","caption":"Catering i spotkania"},
+    {"id":"gallery-cloud-table","src":"https://res.cloudinary.com/peakvbib/image/upload/v1790847509/WhatsApp_Image_2026-09-30_at_10.23.44.jpg","alt":"Stół z przygotowanymi daniami restauracji.","caption":"Urodziny dla dzieci"},
+    {"id":"gallery-cloud-workshop","src":"https://res.cloudinary.com/peakvbib/image/upload/v1790847514/WhatsApp_Image_2026-09-30_at_10.39.25.jpg","alt":"Pizza przygotowana podczas warsztatów.","caption":"Warsztaty z pizzy"}
+  ],
+  "reviews": [
+    "Jak zawsze szybka dostawa. Dania świeże i gorące",
+    "Super, smaczne jak zawsze.",
+    "Wszystko przepysznie i na czas",
+    "Pyszna pizza, dostawa przed czasem",
+    "Bardzo dobre pizze, punktualna dostawa, miła obsługa"
+  ]
+}
