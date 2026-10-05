@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f3eb">
+  <title>%%SEO_TITLE%%</title>
+  <meta name="description" content="%%META_DESCRIPTION%%">
+  <meta name="keywords" content="restauracja Rybnik, pizzeria Rybnik, pizza na dowóz Rybnik, obiady Rybnik, catering Rybnik, urodziny dla dzieci Rybnik">
+  %%CANONICAL_LINK%%
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:site_name" content="Papryczka w Bogu">
+  <meta property="og:title" content="%%SEO_TITLE%%">
+  <meta property="og:description" content="%%META_DESCRIPTION%%">
+  %%OG_URL%%
+  <meta property="og:image" content="%%OG_IMAGE%%">
+  <meta property="og:image:alt" content="Pizza z oficjalnej oferty Papryczki w Bogu w Rybniku">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="%%SEO_TITLE%%">
+  <meta name="twitter:description" content="%%META_DESCRIPTION%%">
+  <meta name="twitter:image" content="%%OG_IMAGE%%">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="/images/pizza-hero-1200.webp" fetchpriority="high">
+  <link rel="stylesheet" href="/assets/styles.css">
+  %%STRUCTURED_DATA%%
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+
+  <header class="site-header" id="top">
+    <div class="header-inner wrap">
+      <a class="brand" href="/" aria-label="Papryczka w Bogu — strona główna">
+        <img class="brand-logo" src="https://res.cloudinary.com/peakvbib/image/upload/v1790865994/logo-removebg-preview.png" alt="Papryczka w Bogu" width="250" height="70">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Otwórz menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Nawigacja główna">
+        %%NAV_ITEMS%%
+        <a class="header-phone" href="%%PHONE_HREF%%"><span aria-hidden="true">☎</span><span>%%PHONE_DISPLAY%%</span></a><button class="button button--small button--primary nav-order" type="button">Zamów online <span aria-hidden="true">↗</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    %%MAIN%%
+  </main>
+
+  <footer class="site-footer"><div class="wrap footer-main"><a class="brand brand--footer" href="/"><img class="brand-logo" src="https://res.cloudinary.com/peakvbib/image/upload/v1790865994/logo-removebg-preview.png" alt="Papryczka w Bogu" width="250" height="70"></a><p>Pizza, obiady i coś więcej.<br>Osiedle Południe 48C, Rybnik</p><div class="footer-links"><a href="/#galeria">Galeria</a><a href="/#opinie">Opinie</a><a href="%%PHONE_HREF%%">Zadzwoń</a><a href="mailto:papryczkawbogu@gmail.com">Napisz e-mail</a><a href="https://www.facebook.com/profile.php?id=100051124369968" target="_blank" rel="noopener noreferrer">Facebook <span aria-hidden="true">↗</span></a><span class="social-pending"></span></div><button class="button button--primary" type="button">Zamów online <span aria-hidden="true">↗</span></button></div><div class="wrap footer-bottom"><span>© <span id="current-year">2026</span> Papryczka w Bogu · Rybnik</span><span>Strona przygotowana przez <a class="text-link" href='https://www.facebook.com/patryk.hural.9'>Patryk Hural</a></span></div></footer>
+
+  <dialog class="product-dialog" id="product-dialog" aria-labelledby="dialog-title"><button class="dialog-close" type="button" data-product-close aria-label="Zamknij szczegóły dania">×</button><div class="dialog-content" id="dialog-content"></div></dialog>
+  <dialog class="lightbox" id="lightbox" aria-label="Powiększone zdjęcie z galerii"><button class="dialog-close lightbox-close" type="button" data-lightbox-close aria-label="Zamknij galerię">×</button><button class="lightbox-arrow lightbox-arrow--prev" type="button" data-lightbox-prev aria-label="Poprzednie zdjęcie">←</button><figure><img id="lightbox-image" alt=""><figcaption id="lightbox-caption"></figcaption></figure><button class="lightbox-arrow lightbox-arrow--next" type="button" data-lightbox-next aria-label="Następne zdjęcie">→</button><p class="lightbox-count" id="lightbox-count" aria-live="polite"></p></dialog>
+  <script type="application/ld+json">%%STRUCTURED_DATA_BODY%%</script>
+  <script type="application/json" id="site-data">%%SITE_JSON%%</script>
+  <script type="application/json" id="menu-data">%%MENU_JSON%%</script>
+  <script type="application/json" id="gallery-data">%%GALLERY_JSON%%</script>
+  <script type="module" src="/assets/main.js"></script>
+</body>
+</html>

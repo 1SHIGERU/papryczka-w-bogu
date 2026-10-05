@@ -9,7 +9,9 @@ const [site, menu, catering, galleryData] = await Promise.all([
 ]);
 const ORDER_URL = site.ORDER_URL;
 if (!/^https:\/\//.test(ORDER_URL)) throw new Error("ORDER_URL musi zawierać zweryfikowany adres HTTPS zewnętrznego systemu zamówień.");
-const template = await readFile(path.join(root, "src/index.template.html"), "utf8");
+const template = await readFile(path.join(root, "src/layout.html"), "utf8");
+const sectionKeys = ["hero", "offer", "menu", "imprezy", "about", "why", "catering", "urodziny", "warsztaty", "galeria", "opinie", "sala", "kontakt"];
+const sections = Object.fromEntries(await Promise.all(sectionKeys.map(async (key) => [key, await readFile(path.join(root, `src/sections/${key}.html`), "utf8")])));
 const output = path.join(root, "dist");
 
 const esc = (value = "") => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
@@ -33,13 +35,14 @@ const srcsetFor = (url) => {
 };
 const categoryPhotoCaptions = (category) => category.photoCaption || ``;
 const offerCards = [
-  {title:"Pizza", description:"Klasyczne i autorskie kompozycje.", href:"#menu", index:"01", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790847509/WhatsApp_Image_2026-09-30_at_10.23.45_6.jpg", imageAlt:"Pizza z sosem i dodatkami sfotografowana na drewnianej desce.", photoNote:""},
-  {title:"Obiady", description:"Dania obiadowe przygotowywane na miejscu.", href:"#menu", index:"02", image:"/images/gallery-02-1200.webp", imageAlt:"Danie obiadowe i miska zupy sfotografowane w restauracji.", photoNote:""},
-  {title:"Fast Food", description:"Burgery, zapiekanki, frytki i nuggetsy.", href:"#menu", index:"03", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790850876/WhatsApp_Image_2026-09-30_at_10.23.45_7.jpg", imageAlt:"Autentyczne zdjęcie wnętrza restauracji, sali i lady z witryną.", photoNote:"", topic:"fastfood"},
-  {title:"Sałatki", description:"Lżejsze propozycje ze świeżymi składnikami.", href:"#menu", index:"04", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790851781/468323684_17858004312300900_8240667284657994399_n.jpg", imageAlt:"Szaszłyk z dodatkami na talerzu oraz miska zupy z oficjalnej galerii.", photoNote:"", topic:"salads"},
-  {title:"Catering", description:"Oferta dla większej liczby osób.", href:"#catering", index:"05", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790847509/WhatsApp_Image_2026-09-30_at_10.23.45_1.jpg", imageAlt:"Szaszłyk i miska kremowej zupy sfotografowane w restauracji.", photoNote:""},
-  {title:"Imprezy okolicznościowe", description:"Urodziny, chrzciny, roczki, wesela i stypy.", href:"#imprezy", index:"06", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790847516/WhatsApp_Image_2026-09-30_at_10.42.53.jpg", imageAlt:"Wnętrze restauracji przygotowane na spotkanie gości.", photoNote:""},
-  {title:"Urodziny dla dzieci", description:"Animacje, pizza i warsztaty robienia własnej pizzy.", href:"#urodziny", index:"07", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790851931/492512827_1307835494263917_5560112203056928154_n.jpg", imageAlt:"Małe słodkie wypieki z owocami z oficjalnej galerii restauracji.", photoNote:""}
+  {title:"Pizza", description:"Klasyczne i autorskie kompozycje.", href:"/menu", index:"01", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790847509/WhatsApp_Image_2026-09-30_at_10.23.45_6.jpg", imageAlt:"Pizza z sosem i dodatkami sfotografowana na drewnianej desce.", photoNote:""},
+  {title:"Obiady", description:"Dania obiadowe przygotowywane na miejscu.", href:"/menu", index:"02", image:"/images/gallery-02-1200.webp", imageAlt:"Danie obiadowe i miska zupy sfotografowane w restauracji.", photoNote:""},
+  {title:"Fast Food", description:"Burgery, zapiekanki, frytki i nuggetsy.", href:"/menu", index:"03", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790850876/WhatsApp_Image_2026-09-30_at_10.23.45_7.jpg", imageAlt:"Autentyczne zdjęcie wnętrza restauracji, sali i lady z witryną.", photoNote:"", topic:"fastfood"},
+  {title:"Sałatki", description:"Lżejsze propozycje ze świeżymi składnikami.", href:"/menu", index:"04", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790851781/468323684_17858004312300900_8240667284657994399_n.jpg", imageAlt:"Szaszłyk z dodatkami na talerzu oraz miska zupy z oficjalnej galerii.", photoNote:"", topic:"salads"},
+  {title:"Catering", description:"Oferta dla większej liczby osób.", href:"/catering", index:"05", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790847509/WhatsApp_Image_2026-09-30_at_10.23.45_1.jpg", imageAlt:"Szaszłyk i miska kremowej zupy sfotografowane w restauracji.", photoNote:""},
+  {title:"Imprezy okolicznościowe", description:"Urodziny, chrzciny, roczki, wesela i stypy.", href:"/imprezy", index:"06", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790847516/WhatsApp_Image_2026-09-30_at_10.42.53.jpg", imageAlt:"Wnętrze restauracji przygotowane na spotkanie gości.", photoNote:""},
+  {title:"Urodziny dla dzieci", description:"Animacje, pizza i warsztaty robienia własnej pizzy.", href:"/urodziny", index:"07", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790851931/492512827_1307835494263917_5560112203056928154_n.jpg", imageAlt:"Małe słodkie wypieki z owocami z oficjalnej galerii restauracji.", photoNote:""},
+  {title:"Warsztaty z pizzy", description:"Od ciasta do pieca — wspólnie wypiekamy własną pizzę.", href:"/warsztaty", index:"08", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790886819/warsztat.jpg", imageAlt:"Pizza przygotowana podczas warsztatów z pizzy w Papryczce.", photoNote:""}
 ];
 
 
@@ -156,9 +159,10 @@ const structuredData = {
     "addressLocality": address.addressLocality,
     "addressCountry": address.addressCountry
   },
-  "openingHoursSpecification": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].map((day) => ({
-    "@type": "OpeningHoursSpecification", "dayOfWeek": `https://schema.org/${day}`, "opens": "12:00", "closes": "21:30"
-  })),
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"], opens: "12:00", closes: "20:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Friday", "Saturday", "Sunday"], opens: "12:00", closes: "21:00" }
+  ],
   "hasMap": site.googleMapsLink,
   "hasMenu": ORDER_URL,
   "acceptsReservations": "By phone",
@@ -200,17 +204,59 @@ const replacements = {
   "%%MENU_JSON%%": jsonForHTML(menu),
   "%%GALLERY_JSON%%": jsonForHTML({ gallery: galleryForApp })
 };
-let html = template;
-for (const [token, value] of Object.entries(replacements)) html = html.replaceAll(token, value);
-html = html.replaceAll("papryczkawbogu@gmail.com", esc(site.email));
-html = html.replaceAll("https://www.facebook.com/profile.php?id=100051124369968", esc(site.facebookUrl));
-if (html.match(/%%[A-Z_]+%%/)) throw new Error(`Nierozwiązany znacznik szablonu: ${html.match(/%%[A-Z_]+%%/)?.[0]}`);
+const navItems = [
+  { slug: "menu", label: "Menu" },
+  { slug: "imprezy", label: "Imprezy okolicznościowe" },
+  { slug: "catering", label: "Catering" },
+  { slug: "urodziny", label: "Urodziny dla dzieci" },
+  { slug: "warsztaty", label: "Warsztaty pizzy" },
+  { slug: "sala", label: "Wynajem sali" },
+  { slug: "kontakt", label: "Kontakt" }
+];
+const navHTML = (currentSlug) => navItems.map((item) => `<a href="/${item.slug}"${item.slug === currentSlug ? ` aria-current="page"` : ""}>${esc(item.label)}</a>`).join("\n        ");
+
+// Strona główna pokazuje tylko cztery wskazane przez klienta sekcje; reszta trafia na podstrony.
+const pages = [
+  { slug: "", label: "", title: seoTitle, description, sections: ["hero", "about", "offer", "galeria", "opinie"] },
+  { slug: "menu", label: "Menu", title: `Menu | ${site.name}`, description: "Menu Papryczki w Bogu w Rybniku: pizza, obiady, fast food i sałatki. Poznaj skład i ceny, a potem zamów online.", sections: ["menu"] },
+  { slug: "imprezy", label: "Imprezy okolicznościowe", title: `Imprezy okolicznościowe | ${site.name}`, description: "Urodziny, chrzciny, roczki, wesela i stypy — zorganizuj imprezę okolicznościową w Papryczce w Bogu w Rybniku.", sections: ["imprezy"] },
+  { slug: "catering", label: "Catering", title: `Catering | ${site.name}`, description: "Catering na spotkania, imprezy i uroczystości w Rybniku. Poznaj pakiety i sałatki do wyboru w Papryczce w Bogu.", sections: ["catering"] },
+  { slug: "urodziny", label: "Urodziny dla dzieci", title: `Urodziny dla dzieci | ${site.name}`, description: "Urodziny dla dzieci w Papryczce w Bogu: własnoręcznie robiona pizza, animator i zabawa w Rybniku.", sections: ["urodziny"] },
+  { slug: "warsztaty", label: "Warsztaty pizzy", title: `Warsztaty z pizzy | ${site.name}`, description: "Warsztaty pizzy w Papryczce w Bogu: od ciasta do pieca. Sprawdź, jak wyglądają zajęcia w Rybniku.", sections: ["warsztaty"] },
+  { slug: "sala", label: "Wynajem sali", title: `Wynajem sali | ${site.name}`, description: "Wynajem sali w Papryczce w Bogu w Rybniku na rodzinne spotkania i wieczory ze znajomymi. Zapytaj o termin.", sections: ["sala"] },
+  { slug: "kontakt", label: "Kontakt", title: `Kontakt | ${site.name}`, description: "Kontakt z Papryczką w Bogu w Rybniku: adres, telefon, godziny otwarcia i mapa dojazdu do restauracji.", sections: ["kontakt", "why"] }
+];
+
+const breadcrumbsHTML = (label) => `<div class="wrap breadcrumbs-bar"><nav class="breadcrumbs" aria-label="Okruszki nawigacyjne"><a href="/">Strona główna</a><span aria-hidden="true">/</span><span aria-current="page">${esc(label)}</span></nav><h1 class="sr-only">${esc(label)} | Papryczka w Bogu</h1></div>`;
 
 await rm(output, { recursive: true, force: true });
 await mkdir(path.join(output, "assets"), { recursive: true });
-await mkdir(path.join(output, "images"), { recursive: true });
-await writeFile(path.join(output, "index.html"), html, "utf8");
+
+for (const page of pages) {
+  const content = page.sections.map((key) => sections[key].trim()).join("\n\n");
+  const main = page.slug ? `${breadcrumbsHTML(page.label)}\n${content}` : content;
+  const pageReplacements = {
+    ...replacements,
+    "%%SEO_TITLE%%": esc(page.title),
+    "%%META_DESCRIPTION%%": esc(page.description),
+    "%%NAV_ITEMS%%": navHTML(page.slug),
+    "%%MAIN%%": main
+  };
+  // Treść wstawiamy przed pętlą, żeby znaczniki z sekcji też zostały rozwiązane.
+  let html = template.replaceAll("%%MAIN%%", main);
+  for (const [token, value] of Object.entries(pageReplacements)) html = html.replaceAll(token, value);
+  html = html.replaceAll("papryczkawbogu@gmail.com", esc(site.email));
+  html = html.replaceAll("https://www.facebook.com/profile.php?id=100051124369968", esc(site.facebookUrl));
+  if (html.match(/%%[A-Z_]+%%/)) throw new Error(`Nierozwiązany znacznik szablonu (/${page.slug}): ${html.match(/%%[A-Z_]+%%/)?.[0]}`);
+  const target = page.slug ? path.join(output, page.slug, "index.html") : path.join(output, "index.html");
+  await mkdir(path.dirname(target), { recursive: true });
+  await writeFile(target, html, "utf8");
+}
+
+// Awaryjna strona dla hostingu statycznego: nieznany adres wraca na stronę główną.
+await writeFile(path.join(output, "404.html"), `<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=/"><title>${esc(site.name)}</title></head><body><p><a href="/">Przejdź na stronę główną</a></p><script>location.replace("/")</script></body></html>\n`, "utf8");
+
 await cp(path.join(root, "src/css/styles.css"), path.join(output, "assets/styles.css"));
 await cp(path.join(root, "src/js/main.js"), path.join(output, "assets/main.js"));
 await cp(path.join(root, "public"), output, { recursive: true, force: true });
-console.log(`Zbudowano statyczną stronę: ${path.relative(root, output)}/index.html; ${menu.products.length} produktów, ${menu.categories.length} kategorii, ${galleryData.gallery.length} zdjęć.`);
+console.log(`Zbudowano ${pages.length} stron (${pages.map((page) => `/${page.slug}`).join(", ")}); ${menu.products.length} produktów, ${menu.categories.length} kategorii, ${galleryData.gallery.length} zdjęć.`);

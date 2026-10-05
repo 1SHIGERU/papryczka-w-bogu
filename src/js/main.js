@@ -64,10 +64,12 @@ document.querySelectorAll("[data-hero-slider]").forEach((heroSlider) => {
   startAutoplay();
 });
 
-document.querySelectorAll(".brand[href='#top']").forEach((brand) => brand.addEventListener("click", (event) => {
+document.querySelectorAll(".brand[href='/']").forEach((brand) => brand.addEventListener("click", (event) => {
+  // Z podstrony logo prowadzi na stronę główną (domyślne zachowanie przeglądarki).
+  if (window.location.pathname !== "/") return;
   event.preventDefault();
   window.scrollTo({ top: 0, left: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
-  history.replaceState(null, "", "#top");
+  history.replaceState(null, "", "/");
 }));
 
 document.querySelectorAll("[data-occasion-slider]").forEach((occasionSlider) => {
@@ -360,3 +362,10 @@ document.querySelector("[data-review-next]")?.addEventListener("click", () => sc
 
 const yearNode = document.getElementById("current-year");
 if (yearNode) yearNode.textContent = String(new Date().getFullYear());
+
+// Przyciski „Zamów online" (baner, nagłówek, stopka) otwierają zewnętrzny system zamówień.
+document.querySelectorAll("[data-order-open], .nav-order, .site-footer button.button--primary").forEach((button) => {
+  button.addEventListener("click", () => {
+    if (ORDER_URL) window.open(ORDER_URL, "_blank", "noopener,noreferrer");
+  });
+});

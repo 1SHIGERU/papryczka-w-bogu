@@ -1,5 +1,13 @@
 {
   "routes": [
-    {"path": "/", "title": "Papryczka w Bogu — Rybnik"}
+    {"path": "/", "title": "Papryczka w Bogu — Rybnik"},
+    {"path": "/menu", "title": "Menu | Papryczka w Bogu"},
+    {"path": "/imprezy", "title": "Imprezy okolicznościowe | Papryczka w Bogu"},
+    {"path": "/catering", "title": "Catering | Papryczka w Bogu"},
+    {"path": "/urodziny", "title": "Urodziny dla dzieci | Papryczka w Bogu"},
+    {"path": "/warsztaty", "title": "Warsztaty z pizzy | Papryczka w Bogu"},
+    {"path": "/sala", "title": "Wynajem sali | Papryczka w Bogu"},
+    {"path": "/kontakt", "title": "Kontakt | Papryczka w Bogu"}
   ]
 }
+

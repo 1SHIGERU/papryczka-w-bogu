@@ -76,14 +76,37 @@ const server = http.createServer(async (request, response) => {
       return;
     }
     let pathname = decodeURIComponent(url.pathname);
-    if (pathname === "/") pathname = "/index.html";
-    const file = path.resolve(root, `.${pathname}`);
-    if (!file.startsWith(`${root}${path.sep}`) && file !== path.join(root, "index.html")) {
-      response.writeHead(403, { "content-type": "text/plain; charset=utf-8" }).end("Forbidden");
+    const relative = pathname.replace(/^\/+/, "");
+    // Kandydaci: plik dokładnie pod adresem, wariant .html oraz katalog z index.html.
+    const candidates = pathname === "/"
+      ? ["index.html"]
+      : path.extname(relative)
+        ? [relative]
+        : [relative, `${relative}.html`, path.join(relative, "index.html")];
+    let file = null;
+    for (const candidate of candidates) {
+      const resolved = path.resolve(root, candidate);
+      if (!resolved.startsWith(`${root}${path.sep}`)) continue;
+      try {
+        const info = await stat(resolved);
+        if (info.isFile()) {
+          file = resolved;
+          break;
+        }
+      } catch {
+        // Kolejny kandydat.
+      }
+    }
+    if (!file) {
+      const extension = path.extname(relative).toLowerCase();
+      if (extension && extension !== ".html" && contentTypes[extension]) {
+        response.writeHead(404, { "content-type": "text/plain; charset=utf-8", "cache-control": "no-store" }).end("Not found");
+      } else {
+        // Nieistniejąca podstrona → przekierowanie na stronę główną.
+        response.writeHead(302, { location: "/", "cache-control": "no-store", "content-type": "text/plain; charset=utf-8" }).end("Redirect");
+      }
       return;
     }
-    const info = await stat(file);
-    if (!info.isFile()) throw new Error("Not a file");
     const body = await readFile(file);
     const extension = path.extname(file).toLowerCase();
     const cache = "no-cache";
