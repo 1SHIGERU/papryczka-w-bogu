@@ -35,10 +35,10 @@ const srcsetFor = (url) => {
 };
 const categoryPhotoCaptions = (category) => category.photoCaption || ``;
 const offerCards = [
-  {title:"Pizza", description:"Klasyczne i autorskie kompozycje.", href:"/menu", index:"01", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790847509/WhatsApp_Image_2026-09-30_at_10.23.45_6.jpg", imageAlt:"Pizza z sosem i dodatkami sfotografowana na drewnianej desce.", photoNote:""},
-  {title:"Obiady", description:"Dania obiadowe przygotowywane na miejscu.", href:"/menu", index:"02", image:"/images/gallery-02-1200.webp", imageAlt:"Danie obiadowe i miska zupy sfotografowane w restauracji.", photoNote:""},
-  {title:"Fast Food", description:"Burgery, zapiekanki, frytki i nuggetsy.", href:"/menu", index:"03", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790850876/WhatsApp_Image_2026-09-30_at_10.23.45_7.jpg", imageAlt:"Autentyczne zdjęcie wnętrza restauracji, sali i lady z witryną.", photoNote:"", topic:"fastfood"},
-  {title:"Sałatki", description:"Lżejsze propozycje ze świeżymi składnikami.", href:"/menu", index:"04", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790851781/468323684_17858004312300900_8240667284657994399_n.jpg", imageAlt:"Szaszłyk z dodatkami na talerzu oraz miska zupy z oficjalnej galerii.", photoNote:"", topic:"salads"},
+  {title:"Pizza", description:"Klasyczne i autorskie kompozycje.", href:"/menu#pizza", index:"01", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790847509/WhatsApp_Image_2026-09-30_at_10.23.45_6.jpg", imageAlt:"Pizza z sosem i dodatkami sfotografowana na drewnianej desce.", photoNote:""},
+  {title:"Obiady", description:"Dania obiadowe przygotowywane na miejscu.", href:"/menu#lunch", index:"02", image:"/images/gallery-02-1200.webp", imageAlt:"Danie obiadowe i miska zupy sfotografowane w restauracji.", photoNote:""},
+  {title:"Fast Food", description:"Burgery, zapiekanki, frytki i nuggetsy.", href:"/menu#fastfood", index:"03", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790850876/WhatsApp_Image_2026-09-30_at_10.23.45_7.jpg", imageAlt:"Autentyczne zdjęcie wnętrza restauracji, sali i lady z witryną.", photoNote:"", topic:"fastfood"},
+  {title:"Sałatki", description:"Lżejsze propozycje ze świeżymi składnikami.", href:"/menu#salads", index:"04", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790851781/468323684_17858004312300900_8240667284657994399_n.jpg", imageAlt:"Szaszłyk z dodatkami na talerzu oraz miska zupy z oficjalnej galerii.", photoNote:"", topic:"salads"},
   {title:"Catering", description:"Oferta dla większej liczby osób.", href:"/catering", index:"05", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790847509/WhatsApp_Image_2026-09-30_at_10.23.45_1.jpg", imageAlt:"Szaszłyk i miska kremowej zupy sfotografowane w restauracji.", photoNote:""},
   {title:"Imprezy okolicznościowe", description:"Urodziny, chrzciny, roczki, wesela i stypy.", href:"/imprezy", index:"06", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790847516/WhatsApp_Image_2026-09-30_at_10.42.53.jpg", imageAlt:"Wnętrze restauracji przygotowane na spotkanie gości.", photoNote:""},
   {title:"Urodziny dla dzieci", description:"Animacje, pizza i warsztaty robienia własnej pizzy.", href:"/urodziny", index:"07", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790851931/492512827_1307835494263917_5560112203056928154_n.jpg", imageAlt:"Małe słodkie wypieki z owocami z oficjalnej galerii restauracji.", photoNote:""},
@@ -181,6 +181,9 @@ const replacements = {
   "%%PHONE_HREF%%": `tel:${esc(site.phoneHref)}`,
   "%%PHONE_DISPLAY%%": esc(site.phone),
   "%%BIRTHDAY_HREF%%": `tel:${esc(site.birthdayPhoneHref)}`,
+  "%%BIRTHDAY_PHONE_DISPLAY%%": esc(site.birthdayPhone),
+  "%%EVENT_PHONE_HREF%%": `tel:${esc(site.eventPhoneHref)}`,
+  "%%EVENT_PHONE_DISPLAY%%": esc(site.eventPhone),
   "%%MAP_LINK%%": esc(site.googleMapsLink),
   "%%MAP_EMBED_URL%%": esc(site.googleMapsEmbedUrl),
   "%%HERO_SLIDES%%": heroSlidesHTML,

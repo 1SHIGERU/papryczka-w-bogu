@@ -133,6 +133,15 @@ const panels = [...document.querySelectorAll("[data-category-panel]")];
 const searchInput = document.getElementById("menu-search");
 let activeCategory = tabs.find((tab) => tab.getAttribute("aria-selected") === "true")?.dataset.categoryTab || tabs[0]?.dataset.categoryTab;
 
+// Deep-linki z sekcji oferty na stronie głównej: /menu#pizza, /menu#lunch itd.
+function applyHashCategory() {
+  const id = window.location.hash.slice(1);
+  if (!id) return;
+  selectCategory(id);
+}
+applyHashCategory();
+window.addEventListener("hashchange", applyHashCategory);
+
 function applySearch() {
   const term = (searchInput?.value || "").trim().toLocaleLowerCase("pl");
   const activePanel = panels.find((panel) => panel.dataset.categoryPanel === activeCategory);

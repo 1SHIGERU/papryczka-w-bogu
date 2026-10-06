@@ -27,7 +27,9 @@
   "phoneHref": "+48517577606",
   "birthdayPhone": "508 709 344",
   "birthdayPhoneHref": "+48508709344",
-  "birthdayPhoneConfirmed": false,
+  "birthdayPhoneConfirmed": true,
+  "eventPhone": "797 349 762",
+  "eventPhoneHref": "+48797349762",
   "email": "papryczkawbogu@gmail.com",
   "address": {
     "streetAddress": "Osiedle Południe 48C",
