@@ -42,7 +42,7 @@ const offerCards = [
   {title:"Catering", description:"Oferta dla większej liczby osób.", href:"/catering", index:"05", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790847509/WhatsApp_Image_2026-09-30_at_10.23.45_1.jpg", imageAlt:"Szaszłyk i miska kremowej zupy sfotografowane w restauracji.", photoNote:""},
   {title:"Imprezy okolicznościowe", description:"Urodziny, chrzciny, roczki, wesela i stypy.", href:"/imprezy", index:"06", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790847516/WhatsApp_Image_2026-09-30_at_10.42.53.jpg", imageAlt:"Wnętrze restauracji przygotowane na spotkanie gości.", photoNote:""},
   {title:"Urodziny dla dzieci", description:"Animacje, pizza i warsztaty robienia własnej pizzy.", href:"/urodziny", index:"07", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790851931/492512827_1307835494263917_5560112203056928154_n.jpg", imageAlt:"Małe słodkie wypieki z owocami z oficjalnej galerii restauracji.", photoNote:""},
-  {title:"Warsztaty z pizzy", description:"Od ciasta do pieca — wspólnie wypiekamy własną pizzę.", href:"/warsztaty", index:"08", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790886819/warsztat.jpg", imageAlt:"Pizza przygotowana podczas warsztatów z pizzy w Papryczce.", photoNote:""}
+  {title:"Warsztaty z pizzy", description:"Od ciasta do pieca — wspólnie wypiekamy własną pizzę.", href:"/warsztaty", index:"08", image:"https://res.cloudinary.com/peakvbib/image/upload/v1790847517/WhatsApp_Image_2026-09-30_at_10.42.55_2.jpg", imageAlt:"Pizza przygotowana podczas warsztatów z pizzy w Papryczce.", photoNote:""}
 ];
 
 
